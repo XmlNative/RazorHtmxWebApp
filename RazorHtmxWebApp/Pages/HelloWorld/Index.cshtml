@@ -1,0 +1,29 @@
+﻿@page
+@model RazorHtmxWebApp.Pages.HelloWorld.IndexModel
+@{
+    ViewData["Title"] = "Hello World";
+}
+
+<div id="content">
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h4 class="m-0 font-weight-bold text-primary">Hello World</h4>
+            </div>
+            <div class="card-body">
+                <div id="target">
+                    <h4 class="fs-4 mb-4">
+                        Hi
+                    </h4>
+                </div>
+                <button class="btn btn-primary btn-lg px-4"
+                        hx-get="HelloWorld?handler=ClickHere"
+                        hx-target="#target">
+                    Click Here
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
