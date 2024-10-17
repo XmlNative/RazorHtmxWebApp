@@ -1,5 +1,5 @@
 About
-This application is attempting to be the 'simplist thing that will work' in demonstrating Htmx using a Web App with Razor pages.
+This application is attempting to be the 'simplest thing that will work' in demonstrating Htmx using a Web App with Razor pages.
 
 Starting with the community editon of Visual Studio 2022, the base project template is 'ASP.NET Core Web App (Razor Pages)'
 
