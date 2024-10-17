@@ -1,3 +1,15 @@
+
+
+
+
+
+![Screenshot 2024-10-14 092815](https://github.com/user-attachments/assets/7e7944b3-a4a4-4add-8254-f1ed3bc3dfee)
+
+
+![Screenshot 2024-10-14 220009](https://github.com/user-attachments/assets/bce8348c-6bf6-4bd0-ac5b-49c6fb9c590d)
+
+
+
 About
 This application is attempting to be the 'simplest thing that will work' in demonstrating Htmx using a Web App with Razor pages.
 
