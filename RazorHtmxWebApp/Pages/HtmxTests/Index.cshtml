@@ -1,0 +1,80 @@
+﻿@page "{handler?}"
+@model RazorHtmxWebApp.Pages.HtmxTests.IndexModel
+@{
+    ViewData["Title"] = "Htmx Tests";
+}
+
+<div id="content">
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h4 class="m-0 font-weight-bold text-primary">Htmx Tests</h4>
+            </div>
+            <div class="card-body">
+                <div id="htmxtarget">
+                    <h4 class="fs-4 mb-4">
+                        Htmx
+                    </h4>
+                </div>
+                <button class="btn btn-primary btn-lg px-4"
+                        hx-get="HtmxTests?handler=HtmxGet"
+                        hx-target="#htmxtarget">
+                    Htmx Get
+                </button>
+                <br />
+                <br />
+                <button hx-get="/HtmxTests/htmxGetNo"
+                        hx-target="#htmxtarget"
+                        class="btn btn-primary btn-lg px-4">
+                    Htmx Get No
+                </button>
+
+                <br />
+                <br />
+                <button class="btn btn-primary btn-lg px-4"
+                        hx-post="HtmxTests?handler=HtmxPost"
+                        hx-target="#htmxtarget"
+                        hx-headers='{"RequestVerificationToken": "@Model.RequestToken"}'>
+                    Htmx Post
+                </button>
+                <br />
+                <br />
+                <button class="btn btn-primary btn-lg px-4"
+                        hx-post="/HtmxTests/htmxPostNo"
+                        hx-target="#htmxtarget"
+                        hx-headers='{"RequestVerificationToken": "@Model.RequestToken"}'>
+                    Htmx Post No
+                </button>
+                <br />
+                <br />
+                <button class="btn btn-primary btn-lg px-4"
+                        hx-post="HtmxTests?handler=HtmxPostValues"
+                        hx-vals='{"valueInt":1 , "valueString": "2"}'
+                        hx-target="#htmxtarget"
+                        hx-headers='{"RequestVerificationToken": "@Model.RequestToken"}'>
+                    Htmx Post Values
+                </button>
+                <br />
+                <br />
+                <button class="btn btn-primary btn-lg px-4"
+                        hx-post="/HtmxTests/HtmxPostNoValues"
+                        hx-vals='{"valueInt":3 , "valueString": "4"}'
+                        hx-target="#htmxtarget"
+                        hx-headers='{"RequestVerificationToken": "@Model.RequestToken"}'>
+                    Htmx Post No Values
+                </button>
+                <br />
+                <br />
+                <partial name="HtmxTests/_HtmxItemPost" model="@Model.thisItem" />
+                <br />
+                <br />
+                <partial name="HtmxTests/_HtmxItemPostNo" model="@Model.thisItemNo" />
+                <br />
+                <br />
+
+            </div>
+        </div>
+    </div>
+</div>
