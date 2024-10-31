@@ -1,0 +1,27 @@
+﻿@model RazorHtmxWebApp.Pages.HtmxTests.Item
+
+
+<form id="HtmxPost" hx-post="/HtmxTests/HtmxPostNoForm" hx-target="#htmxtarget" hx-swap="innerHTML">
+
+    @Html.AntiForgeryToken()
+
+    <div>
+        <label asp-for="@Model.UniqueIdentifier" class="control-label">Id</label>
+        <input type="text" class="form-control" asp-for="@Model.UniqueIdentifier">
+    </div>
+    <br />
+    <div>
+        <label asp-for="@Model.Name" class="control-label">Item Name</label>
+        <input type="text" class="form-control" asp-for="@Model.Name">
+    </div>
+    <br />
+    <div>
+        <label asp-for="@Model.Description" class="control-label">Short Description</label>
+        <input type="text" class="form-control" asp-for="@Model.Description">
+    </div>
+
+    <br />
+    <br />
+    <button class="btn btn-primary btn-lg px-4">Htmx Post No Form</button>
+
+</form>
